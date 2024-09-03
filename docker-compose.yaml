@@ -1,0 +1,12 @@
+version: "2.28.1"
+services:
+  landing-page2:
+    build: ./landing-page2
+    container_name: testing_container
+    ports: 
+      - '3000:3000'
+    volumes:
+      - ./landing-page2/components:/app/components
+      - ./landing-page2/pages:/app/pages
+      - ./landing-page2/public:/app/public
+      - /app/node_modules
